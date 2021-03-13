@@ -19,4 +19,10 @@ function astra_parent_theme_enqueue_styles() {
 		array( 'astra-style' )
 	);
 
+	wp_enqueue_script('neighborhood-bids-js', 
+		get_stylesheet_directory_uri() . '/dist/child-scripts.frontend.bundle.min.js', 
+		array('jquery'), 
+		filemtime(get_stylesheet_directory() . '/dist/child-scripts.frontend.bundle.min.js'), 
+		true
+	);
 }

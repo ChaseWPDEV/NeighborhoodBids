@@ -7,3 +7,5 @@ Author URI:     https://codeable.io
 Template:       astra
 Version:        0.1.0
 */
+
+@import "./dist/child-styles.css";
