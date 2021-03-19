@@ -2,10 +2,6 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -14,17 +10,20 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-
-
-
-
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$text-color: rgb(0, 0, 0) !default;
+
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+/// @link http://www.htmlcsscolor.com/hex/9bcb3d
+$color-primary: #9bcb3d !default;
+$color-green: $color-primary;
+
+/// General color
+/// @type Color
+$color-black: $text-color;
 
 /// Light grey
 /// @type Color
@@ -38,16 +37,9 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
-
-
-
-
 /// Container's maximum width
 /// @type Length
-$max-width: 1180px !default;
-
-
-
+$max-width: 1080px !default;
 
 
 /// Breakpoints map
