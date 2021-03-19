@@ -241,20 +241,6 @@ function nhb_year_shortcode() {
 }
 add_shortcode('cur_year', 'nhb_year_shortcode');
 
-
-function divi__child_theme_enqueue_styles() {
-
-
-	wp_enqueue_script('neighborhood-bids-js', 
-		get_stylesheet_directory_uri() . '/dist/child-scripts.frontend.bundle.min.js', 
-		array('jquery'), 
-		filemtime(get_stylesheet_directory() . '/dist/child-scripts.frontend.bundle.min.js'), 
-		true
-	);
-
-}
-add_action( 'wp_enqueue_scripts', 'divi__child_theme_enqueue_styles' );
- 
  
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */
