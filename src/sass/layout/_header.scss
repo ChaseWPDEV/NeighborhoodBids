@@ -43,6 +43,7 @@ $nav-entry-padding: #{($header-height - 2 * $nav-text-height)/2}rem;
   @include breakpoint($desktop) {
     .logo_container {
       top: -60px;
+      width: auto;
     }
     // Set header height - normal
     #main-header {
