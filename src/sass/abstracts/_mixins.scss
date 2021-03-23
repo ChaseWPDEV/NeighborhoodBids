@@ -32,3 +32,37 @@
   }
 }
 
+
+/// Change the Divi navigation to use the mobile menu better
+/// @author Collin Condray
+@mixin mobile-navigation {
+  #top-header {
+    display: none;
+  }
+
+  // Use the hamburger navigation by default http://sundari-webdesign.com/divi-changing-breakpoint-of-mobile-menu
+  #main-header .container #et-top-navigation {
+    #top-menu-nav {
+      display: none;
+
+      #top-menu {
+        display: none;
+      }
+    }
+
+    #et_top_search {
+      display: none;
+    }
+
+    #et_mobile_nav_menu {
+      display: block;
+
+      .et_mobile_menu {
+        -overflow-scrolling: touch !important;
+        -webkit-overflow-scrolling: touch !important;
+        max-height: 80vh !important;
+        overflow-y: scroll !important;
+      }
+    }
+  }
+}

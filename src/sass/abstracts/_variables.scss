@@ -14,12 +14,14 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// @type Color
 $text-color: rgb(0, 0, 0) !default;
 
-
 /// Main brand color
 /// @type Color
-/// @link http://www.htmlcsscolor.com/hex/9bcb3d
 $color-primary: #9bcb3d !default;
 $color-green: $color-primary;
+
+/// General color
+/// @type Color
+$color-white: #ffffff;
 
 /// General color
 /// @type Color
@@ -42,12 +44,29 @@ $dark-grey: rgb(68, 68, 68) !default;
 $max-width: 1080px !default;
 
 
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
+/// Breakpoints via the Breakpoint library: Smartphone Portrait
+$smartphone-portrait: max-width 479px;
 
+/// Breakpoints via the Breakpoint library: General Smartphone
+$smartphone: max-width 767px;
+
+/// Breakpoints via the Breakpoint library: General Tablet
+$tablet: 768px 1024px;
+
+/// Breakpoints via the Breakpoint library: Tablet Portrait
+$tablet-portrait: $tablet (orientation portrait);
+
+/// Breakpoints via the Breakpoint library: Tablet Landscape
+$tablet-landscape: $tablet (orientation landscape);
+
+/// Breakpoints via the Breakpoint library: General Mobile
+$mobile: 0 1024px;
+
+/// Breakpoints via the Breakpoint library: Standard Desktop
+$desktop: 1025px;
+
+/// Switch to the mobile nav when the window gets too small to show the entire menu
+$wide-desktop-mobile-nav: 0 1200px;
+
+/// Breakpoints via the Breakpoint library: Wide Desktop (from Divi)
+$wide-desktop: 1200px;

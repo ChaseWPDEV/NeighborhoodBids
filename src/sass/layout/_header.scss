@@ -1,3 +1,101 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+
+
+// Set variables to automatically compute header dimensions
+$header-height: 8rem;
+$header-min-height: 5rem;
+$nav-text-height: 1rem;
+$nav-entry-padding: #{($header-height - 2 * $nav-text-height)/2}rem;
+
+// Top header not used in this design
+
+#main-header {
+
+  // Give the nav a little space
+  padding: 1rem 0;
+
+  // Don't let the logo get too big
+  #logo {
+    max-height: 80px;
+  }
+
+  .sub-menu,
+  .et_mobile_menu {
+    // Set theme mobile menu top line color
+    border-color: $color-green;
+  }
+
+  a {
+    // Make sure underlines are removed from nav entries
+    text-decoration: none;
+  }
+
+  // Remove extra line theme adds to header
+  box-shadow: unset;
+  &.et-fixed-header {
+    box-shadow: unset !important; // Override Divi theme styles
+  }
+
+  // Special nav formatting for the desk top
+  @include breakpoint($desktop) {
+    .logo_container {
+      top: -60px;
+    }
+    // Set header height - normal
+    #main-header {
+      min-height: #{$header-height}rem !important;
+      box-shadow: none;
+    }
+
+    // Set header height - shrunken header
+    #main-header.et-fixed-header {
+      min-height: $header-min-height !important;
+    }
+
+    #et-top-navigation {
+      padding: 0 !important;
+
+      #et_top_search {
+        margin-top: #{$header-height / 2};
+      }
+    }
+
+    #top-menu {
+      padding-bottom: $nav-entry-padding;
+
+      & > li {
+        padding-top: $nav-entry-padding;
+        padding-right: 1rem;
+        & > a {
+          padding: #{$nav-text-height / 2} !important;
+        }
+      }
+      .menu-item-has-children > a:first-child:after {
+        position: relative;
+        margin-left: #{$nav-text-height / 2};
+      }
+    }
+
+    // Show the name of the social network on mobile
+    .social-title {
+      display: none;
+    }
+  }
+}
+
+// Show the mobile menu when the navigation gets too small
+@include breakpoint($wide-desktop-mobile-nav) {
+  #top-menu-nav,
+  #et_top_search {
+    display: none;
+  }
+  #et_mobile_nav_menu {
+    display: block;
+    .mobile_menu_bar:before {
+      color: $color-primary;
+    }
+  }
+}

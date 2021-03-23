@@ -1,3 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+// Make the social icons round
+footer .et_pb_social_media_follow li a.icon {
+  border-radius: 50%;
+}

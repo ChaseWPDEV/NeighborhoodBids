@@ -1,0 +1,15 @@
+// Custom CSS for GravityForms
+
+.gform_button {
+  padding: 6px 20px;
+  font-size: 20px;
+}
+.gform_footer {
+  text-align: center;
+}
+
+// The normal GF confirmation text is very small. Make it look like the other text.
+.gform_confirmation_message {
+  font-size: 1rem;
+  text-align: center;
+}

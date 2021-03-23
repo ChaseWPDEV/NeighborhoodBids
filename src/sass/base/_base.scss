@@ -31,3 +31,26 @@ a {
     text-decoration: underline;
   }
 }
+
+
+/**
+ * Basic styles for Divi links
+ */
+a {
+
+  // Remove the underline from sliders
+  &.et-pb-slider-arrow,
+  &.et-pb-arrow-prev,
+  &.et-pb-arrow-next,
+  &.et_pb_video_play,
+  &.et_pb_video_play:active,
+  &.et_pb_video_play:focus,
+  &.et_pb_video_play:hover,
+  &.et_pb_font_icon {
+    text-decoration: none;
+  }
+
+  @include on-event {
+    text-decoration: none;
+  }
+}

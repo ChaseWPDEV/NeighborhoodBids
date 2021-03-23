@@ -1,3 +1,50 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+/// General button formatting. Covers the Divi button widget and short code
+.small-button,
+.et_pb_button,
+.et_pb_module .et_pb_button,
+.gform_button {
+	background-color: $color-green;
+	border-radius: 3px;
+	border-color: $color-white;
+	color: white;
+
+	@include on-event {
+		background-color: $color-green;
+	}
+}
+
+// Navigation button styling
+#top-header,
+.et-fixed-header#top-header {
+	.--nav-member-button,
+	.--nav-vendor-button {
+		a {
+			padding: 1rem;
+			border-radius: 3px;
+			color: white;
+		}
+	}
+}
+
+// Make text white on mobile
+.et_mobile_menu li {
+	&.--nav-member-button,
+	&.--nav-vendor-button {
+        text-align: center;
+		a {
+			color: white;
+		}
+	}
+}
+
+.--nav-member-button a {
+	background-color: $color-green;
+}
+
+.--nav-vendor-button a {
+	background-color: $color-black;
+}

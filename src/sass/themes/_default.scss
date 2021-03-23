@@ -2,3 +2,9 @@
 // When having several themes, this file contains everything related to the
 // default one.
 // -----------------------------------------------------------------------------
+
+
+/// Fix Divi Scrollbar bug https://divibooster.com/preventing-the-divi-theme-horizontal-scroll-bar-bug/
+#page-container {
+  overflow: hidden;
+}
