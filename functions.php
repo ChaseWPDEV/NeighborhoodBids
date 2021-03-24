@@ -97,7 +97,7 @@ function nhb_enqueue_theme_styles()
 {
 	//Add Google Fonts
 	// https://onlinemediamasters.com/load-local-fonts-locally-wordpress/
-	//wp_enqueue_style( 'site-fonts', get_stylesheet_directory_uri() .'/fonts/stylesheet.css', array(), 1.0 );
+	wp_enqueue_style( 'site-fonts', get_stylesheet_directory_uri() .'/src/fonts/stylesheet.css', array(), 1.0 );
 
 	// Add font awesome
 	// wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() .'/fonts/font-awesome/css/all.css', array(), 1.0 );

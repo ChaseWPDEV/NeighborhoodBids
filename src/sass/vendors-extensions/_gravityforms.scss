@@ -13,3 +13,42 @@
   font-size: 1rem;
   text-align: center;
 }
+
+
+.gfield {
+  input,
+  textarea,
+  select {
+    background-color: transparent;
+    border: 2px solid $color-green;
+	border-radius: 3px;
+    color: $color-black;
+
+    &::-webkit-input-placeholder {
+      color: $color-black;
+    }
+  }
+}
+
+.gform_wrapper {
+  .gform_fields .field_sublabel_below .ginput_complex.ginput_container label,
+  // needs label tag to override plugin style
+  .top_label label.gfield_label {
+    // Hide the labels by default. Use placeholders instead.
+    display: none;
+  }
+
+  .gform_fields .gfield {
+    /// Explicitly show GravityForm labels. This is commonly used on radio and select input types.
+    /// @name .gf-show-label
+    &.gf-show-label {
+      // needs label tag to override plugin style
+      &.field_sublabel_below .ginput_complex.ginput_container label {
+        display: block;
+      }
+      label.gfield_label {
+        display: inline-block;
+      }
+    }
+  }
+}
