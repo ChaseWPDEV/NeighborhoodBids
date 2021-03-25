@@ -7,3 +7,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa Light'), local('NexaLight'),
+        url('NexaLight.woff2') format('woff2'),
+        url('NexaLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
