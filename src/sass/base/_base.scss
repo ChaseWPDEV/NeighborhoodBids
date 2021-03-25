@@ -53,21 +53,49 @@ a {
 	}
 }
 
+// Default headers on Divi are too large for mobile
+@include breakpoint($smartphone) {
+	// Extra specificity needed for override
+	.et_pb_module.et_pb_fullwidth_header {
+		&.et_pb_fullwidth_header_0 {
+			min-height: unset;
+		}
+
+		.et_pb_fullwidth_header_container {
+			// Make the header text take up the whole space
+			width: 100%;
+		}
+
+		.et_pb_fullwidth_header_container .header-content {
+			// Make the header text take up the whole space
+			width: 100%;
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				&.et_pb_module_header {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
 
 /// Remove whitespace from the top and bottom of an element so the elements sit right on top of each other.
 .--novspace {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 0 !important; // Overwrite theme styles in certain places
-  padding-top: 0 !important; // Overwrite theme styles in certain places
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-bottom: 0 !important; // Overwrite theme styles in certain places
+	padding-top: 0 !important; // Overwrite theme styles in certain places
 }
-
 
 /// General style to vertically align row
 .--vertical-row-align {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }

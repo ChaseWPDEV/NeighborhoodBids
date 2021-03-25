@@ -100,3 +100,22 @@ $nav-entry-padding: #{($header-height - 2 * $nav-text-height)/2}rem;
     }
   }
 }
+
+
+/* Make buttons line up to the bottom of rows https://stevenstromick.com/divi-tutorials/align-buttons-to-the-bottom-of-a-row */
+@include breakpoint($desktop) {
+	.--ss_row_align_buttons {
+		.et_pb_column {
+			padding-bottom: 4rem;
+		}
+
+		.et_pb_button_module_wrapper {
+			position: absolute;
+			bottom: 1.25rem;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+
+}

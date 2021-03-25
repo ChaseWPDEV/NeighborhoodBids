@@ -8,3 +8,31 @@
 #page-container {
   overflow: hidden;
 }
+
+/* Make buttons line up to the bottom of rows on desktop https://stevenstromick.com/divi-tutorials/align-buttons-to-the-bottom-of-a-row */
+@include breakpoint($desktop) {
+	.--ss_row_align_buttons {
+		.et_pb_column {
+			padding-bottom: 4rem;
+		}
+
+		.et_pb_button_module_wrapper {
+			position: absolute;
+			bottom: 1.25rem;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+
+}
+
+
+/// Used for adding some space around the blurb description when the background column is a solid color
+.--blurb-description-padding {
+
+    // Add some padding to the blurb description so it's not at the edge of the white space
+    .et_pb_blurb_description {
+      padding: 0 1rem 1rem 1rem;
+    }
+}
