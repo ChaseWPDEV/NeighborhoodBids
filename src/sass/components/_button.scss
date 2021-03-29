@@ -8,11 +8,13 @@
 .et_pb_module .et_pb_button,
 .gform_button {
 	background-color: $color-green;
-	border-radius: 3px;
 	border-color: $color-white;
-	color: white;
+	border-radius: 3px;
+    border-style: solid; // Override gforms button style
 	padding: 0.375rem 1.25rem;
+	color: $color-white;
     font-size: 1.25rem;
+    font-weight: 700;
     white-space: normal;
 
 	@include on-event {
