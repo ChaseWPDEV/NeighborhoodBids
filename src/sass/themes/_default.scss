@@ -9,6 +9,11 @@
   overflow: hidden;
 }
 
+// Add background to full width
+.et_pb_fullwidth_section.__page-header .et_pb_fullwidth_header_container {
+  background-color: rgba(0,0,0,0.3);
+}
+
 /* Make buttons line up to the bottom of rows on desktop https://stevenstromick.com/divi-tutorials/align-buttons-to-the-bottom-of-a-row */
 @include breakpoint($desktop) {
 	.--ss_row_align_buttons {
