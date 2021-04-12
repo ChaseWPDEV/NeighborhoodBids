@@ -242,6 +242,48 @@ function nhb_year_shortcode() {
 add_shortcode('cur_year', 'nhb_year_shortcode');
 
  
+/**
+ * Register a metabox on subscription's page
+ * @link https://metabox.io/online-generator/
+ */
+
+add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
+
+function your_prefix_register_meta_boxes( $meta_boxes ) {
+    $prefix = '';
+
+	$args = [
+		'numberposts' => -1,
+		'post_type'   => 'vendor_deals',
+		'order'		  => 'DESC',
+		'orderby'	  => 'date'
+	];
+	   
+	$vendors = get_posts( $args );
+	$options = [];
+	foreach($vendors as $vendor) {
+		$options[$vendor->post_title] = esc_html__($vendor->post_title, 'neighborhood');
+	}
+
+    $meta_boxes[] = [
+        'title'   => esc_html__( 'Attach Vendor', 'neighborhood' ),
+        'id'      => 'attach_vendor',
+        'context' => 'normal',
+		'post_types'	=> ['shop_subscription'],
+        'fields'  => [
+            [
+                'type'    => 'select_advanced',
+                'name'    => esc_html__( 'Vendors', 'neighborhood' ),
+                'id'      => $prefix . 'vendors',
+                'options' => $options,
+				'placeholder' => esc_html__( 'Select a vendor', 'neighborhood' ),
+            ],
+        ],
+    ];
+
+    return $meta_boxes;
+} 
+
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */
 /*-----------------------------------------------------------------------------------*/
