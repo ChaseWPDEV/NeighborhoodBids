@@ -1,0 +1,100 @@
+// Custom CSS for Woocommerce
+
+// Center titles, prices in product list
+.woocommerce-loop-product__title,
+.woocommerce-loop-product__link > span.price {
+	text-align: center;
+}
+
+li.product {
+	text-align: center;
+}
+
+body:not(.et-tb).single-product {
+	#top-header,
+	#main-header {
+		max-width: $max-width;
+		margin: 0 auto;
+		.container {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	#main-content .container {
+		max-width: none;
+		padding: 0;
+	}
+}
+
+// Shop page
+body.page-id-25949 {
+	ul.products {
+		li {
+			.et_shop_image,
+			.woocommerce-loop-product__title,
+			.star-rating {
+				float: left;
+				width: 30%;
+				margin-right: 3%;
+			}
+
+			.price {
+			}
+
+			.product a img {
+			}
+		}
+
+		li.product-category {
+			margin: 0;
+			text-align: left;
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	table.wcpt-table {
+		border-collapse: separate;
+        border-spacing: 0 1rem;
+        border: none;
+	}
+
+	.wcpt-row {
+		margin-bottom: 2rem;
+		background-color: transparent;
+
+		border-radius: 3px;
+        /* border: border-width border-style (required) border-color */
+        border: 3px solid $color-green !important; // Override theme style
+
+		td {
+			padding: 0 1rem;
+			width: 40%;
+			&:last-child {
+				padding: 0;
+				width: 20%;
+			}
+
+			.wcpt-title {
+				font-weight: bold;
+			}
+
+			.wcpt-product-image-wrapper {
+				max-height: none;
+				max-width: none;
+			}
+		}
+	}
+
+	.wcpt-average-rating,
+	.wcpt-review-count {
+		display: none;
+	}
+
+	.wcpt-star svg {
+		color: $color-green;
+	}
+}

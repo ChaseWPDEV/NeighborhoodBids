@@ -6,7 +6,16 @@
 .small-button,
 .et_pb_button,
 .et_pb_module .et_pb_button,
-.gform_button {
+.gform_button,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce-page.et_pb_button_helper_class button.button,
+.woocommerce-page.et_pb_button_helper_class a.button.alt,
+.woocommerce-page.et_pb_button_helper_class a.button,
+.woocommerce a.button,
+.woocommerce-page a.button,
+body.page-id-25949 .wcpt-table a.wcpt-button
+{
 	background-color: $color-green;
 	border-color: $color-white;
 	border-radius: 3px;
