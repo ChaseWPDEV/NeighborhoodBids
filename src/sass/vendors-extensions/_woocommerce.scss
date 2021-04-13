@@ -28,7 +28,7 @@ body:not(.et-tb).single-product {
 }
 
 // Shop page
-body.page-id-25949 {
+.--deals-main-list {
 	ul.products {
 		li {
 			.et_shop_image,
@@ -38,28 +38,28 @@ body.page-id-25949 {
 				width: 30%;
 				margin-right: 3%;
 			}
-
-			.price {
-			}
-
-			.product a img {
-			}
-		}
-
-		li.product-category {
-			margin: 0;
-			text-align: left;
-
-			img {
-				display: none;
-			}
 		}
 	}
+}
 
+.--deals-category-links {
+	.woocommerce ul.products li {
+		&.product a img {
+			display: none;
+		}
+
+		&.product-category {
+			margin: 0;
+			text-align: left;
+		}
+	}
+}
+
+#wcpt-26055 {
 	table.wcpt-table {
 		border-collapse: separate;
-        border-spacing: 0 1rem;
-        border: none;
+		border-spacing: 0 1rem;
+		border: none;
 	}
 
 	.wcpt-row {
@@ -67,13 +67,15 @@ body.page-id-25949 {
 		background-color: transparent;
 
 		border-radius: 3px;
-        /* border: border-width border-style (required) border-color */
-        border: 3px solid $color-green !important; // Override theme style
+		/* border: border-width border-style (required) border-color */
 
 		td {
+			border-bottom: 3px solid $color-green !important; // Override theme style
+			border-top: 3px solid $color-green !important; // Override theme style
 			padding: 0 1rem;
 			width: 40%;
 			&:last-child {
+				border-right: 3px solid $color-green !important; // Override theme style
 				padding: 0;
 				width: 20%;
 			}
@@ -85,6 +87,10 @@ body.page-id-25949 {
 			.wcpt-product-image-wrapper {
 				max-height: none;
 				max-width: none;
+			}
+
+			&:first-child {
+				border-left: 3px solid $color-green !important; // Override theme style
 			}
 		}
 	}

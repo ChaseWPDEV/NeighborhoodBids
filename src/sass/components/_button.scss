@@ -14,14 +14,14 @@
 .woocommerce-page.et_pb_button_helper_class a.button,
 .woocommerce a.button,
 .woocommerce-page a.button,
-body.page-id-25949 .wcpt-table a.wcpt-button
+#wcpt-26055 .wcpt-table a.wcpt-button
 {
 	background-color: $color-green;
 	border-color: $color-white;
 	border-radius: 3px;
     border-style: solid; // Override gforms button style
 	padding: 0.375rem 1.25rem;
-	color: $color-white;
+	color: $color-white !important; // Override Divi style
     font-size: 1.25rem;
     font-weight: 700;
     white-space: normal;
