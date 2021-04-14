@@ -28,7 +28,7 @@ body:not(.et-tb).single-product {
 }
 
 // Shop page
-.--deals-main-list {
+.__deals-main-list {
 	ul.products {
 		li {
 			.et_shop_image,
@@ -42,7 +42,37 @@ body:not(.et-tb).single-product {
 	}
 }
 
-.--deals-category-links {
+.__deals-divi-list {
+	ul.products {
+		li.product {
+			border-radius: 3px;
+			/* border: border-width border-style (required) border-color */
+			border: 3px solid $color-green;
+			padding: 1rem !important; // Override woocommerce style
+
+			.et_shop_image {
+				float: left;
+				width: 47%;
+				margin-right: 3%;
+			}
+
+			.woocommerce-loop-product__title {
+			}
+
+			.star-rating {
+				width: auto !important; // Override woocommerce style
+				&::before,
+				span::before {
+					float: none;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+.__deals-category-links {
 	.woocommerce ul.products li {
 		&.product a img {
 			display: none;
@@ -55,6 +85,7 @@ body:not(.et-tb).single-product {
 	}
 }
 
+// Shop shortcode
 #wcpt-26055 {
 	table.wcpt-table {
 		border-collapse: separate;
