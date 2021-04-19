@@ -34,7 +34,7 @@ body:not(.et-tb).single-product {
 	}
 
 	.price {
-		text-align: center;
+		text-align: right;
 		& + p {
 			display: none;
 		}
@@ -46,7 +46,7 @@ body:not(.et-tb).single-product {
 
 	.star-rating.wc_views_star_rating {
 		margin-bottom: 20px;
-		text-align: center;
+		text-align: right;
 		width: auto !important; // Override woocommerce style
 		& > span {
 			overflow: unset;
@@ -59,6 +59,6 @@ body:not(.et-tb).single-product {
 		}
 	}
 	.button {
-		text-align: center;
+		text-align: right;
 	}
 }
