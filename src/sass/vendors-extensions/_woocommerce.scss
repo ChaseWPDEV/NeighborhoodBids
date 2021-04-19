@@ -32,7 +32,15 @@ body:not(.et-tb).single-product {
 	h1 {
 		color: $color-green;
 	}
-	.price + p {
+
+	.price {
+		text-align: center;
+		& + p {
+			display: none;
+		}
+	}
+
+	.subscription-details {
 		display: none;
 	}
 
