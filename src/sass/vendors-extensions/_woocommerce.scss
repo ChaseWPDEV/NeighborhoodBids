@@ -62,3 +62,9 @@ body:not(.et-tb).single-product {
 		text-align: right;
 	}
 }
+
+
+// Hide First Payment Date
+.first-payment-date {
+  display: none;
+}
