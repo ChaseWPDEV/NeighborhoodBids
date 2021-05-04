@@ -242,6 +242,35 @@ function nhb_year_shortcode() {
 add_shortcode('cur_year', 'nhb_year_shortcode');
 
 
+function wc_subscriptions_custom_price_string( $pricestring ) {
+	// More verstile than the method below as global product isn't available on the cart's page
+	$newprice = str_replace( 'on the 1st of each month', ' / month', $pricestring );
+
+	// global $product;
+
+	// $newprice = $pricestring;
+	// $terms = get_the_terms( $product->ID, 'product_cat' );
+
+	// // Only take in the first category
+	// $category = wp_list_pluck($terms, 'slug')[0] ?? false;
+
+	// // Skip if there are no categories
+	// if ( !$category ) return $newprice;
+	
+	// if ( in_array($category, ['pool-service', 'lawn-care']) ) {
+	// 	$newprice = str_replace( 'on the 1st of each month', ' / month', $pricestring );
+	// }
+
+	// if ( in_array($category, ['pest-control']) ) {
+	// 	// No change
+	// }
+	
+	return $newprice;
+}
+
+add_filter( 'woocommerce_subscriptions_product_price_string', 'wc_subscriptions_custom_price_string' );
+add_filter( 'woocommerce_subscription_price_string', 'wc_subscriptions_custom_price_string' );
+
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */
 /*-----------------------------------------------------------------------------------*/
