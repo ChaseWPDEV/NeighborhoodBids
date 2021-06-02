@@ -303,6 +303,16 @@ function include_tracking_scripts() {
 	<?php
 }
 
+add_action( 'wp_enqueue_scripts', 'divi__child_theme_enqueue_styles' );
+ 
+ 
+//you can add custom functions below this line:
+function nbids_additional_information($additional){
+	return "Deal Requirements";
+}
+add_filter('woocommerce_product_additional_information_heading', 'nbids_additional_information');
+
+
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */
 /*-----------------------------------------------------------------------------------*/
