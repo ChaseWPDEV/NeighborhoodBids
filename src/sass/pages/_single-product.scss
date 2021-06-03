@@ -1,0 +1,7 @@
+body.single-product {
+	.woocommerce-variation.single_variation {
+		.woocommerce-variation-price, .woocommerce-variation-description, .woocommerce-variation-availability {
+			display: none;
+		}
+	}
+}
