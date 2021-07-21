@@ -12,8 +12,6 @@ body.single-product {
 	table.variations {
 		td.label {
 			display: table-row;
-			display: block;
-			margin-bottom: 10px;
 
 			&:before {
 				content: "Select ";
@@ -23,12 +21,15 @@ body.single-product {
 
 			label {
 				font-size: 1.5em;
-				margin-bottom: 15px;
 			}
 		}
 
 		td.value {
 			display: table-row;
+
+			select#pa_neighborhood {
+				margin-top: 15px;
+			}
 		}
 	}
 }
