@@ -8,4 +8,27 @@ body.single-product {
 	// .woocommerce-variation-add-to-cart .efw-fee-notice {
 	// 	display: none;
 	// }
+
+	table.variations {
+		td.label {
+			display: table-row;
+			display: block;
+			margin-bottom: 10px;
+
+			&:before {
+				content: "Select ";
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+
+			label {
+				font-size: 1.5em;
+				margin-bottom: 15px;
+			}
+		}
+
+		td.value {
+			display: table-row;
+		}
+	}
 }
