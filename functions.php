@@ -309,6 +309,23 @@ function nbids_additional_information($additional){
 }
 add_filter('woocommerce_product_additional_information_heading', 'nbids_additional_information');
 
+function nbids_body_class($classes){
+	global $post;
+	if($post->post_type !== 'product'){
+		return $classes;
+	}
+	$product=WC()->product_factory->get_product($post);
+	
+	if($product->get_type() === 'subscription'){
+		$classes[]='simple-subscription';
+	}
+	if($product->get_type() === 'variable-subscription'){
+		$classes[]='variable-subscription';
+	}
+	return $classes;
+}
+add_filter('body_class', 'nbids_body_class');
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */
